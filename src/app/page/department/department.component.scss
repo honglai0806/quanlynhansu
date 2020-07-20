@@ -1,0 +1,271 @@
+.m-admMembers {
+    margin-top: 15px;
+    .m-topTitleMembers {
+      h3 {
+        float: left;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 40px;
+        color: #000000;
+      }
+      .right-btn {
+        float: right;
+        button {
+          font-weight: bold;
+          line-height: 20px;
+          padding: 0 50px;
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .m-contentMembers {
+      background: #fff;
+      border-radius: 4px;
+      border: 1.5px solid #f1f1f1;
+      .m-filterMembers {
+        padding: 10px 20px;
+      }
+    }
+    .form-search {
+      .left-input {
+        top: 30% !important;
+        left: 5px !important;
+      }
+      .input-search {
+        background: transparent;
+        border-bottom: 1px solid #eaebef;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 40px;
+        color: #2c3e50;
+        mix-blend-mode: normal;
+        opacity: 0.75;
+        padding: 20px 20px 20px 28px;
+      }
+      .input-search::placeholder {
+        color: #414d55;
+      }
+  
+      p.total-job {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        color: #f77925;
+        position: absolute;
+        top: 22%;
+        right: 17px;
+        span {
+          color: #2f373d;
+        }
+      }
+    }
+    .table-responsize {
+      table {
+        overflow-x: auto;
+        width: 100%;
+        .border-left {
+          border-left: 1px solid #dee2e6;
+        }
+        thead {
+          background: #eaebef;
+          th {
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            color: #2f373d;
+          }
+        }
+        tbody tr:nth-child(odd) {
+          background: #f7f8fa;
+        }
+        tbody {
+          td {
+            padding: 15px 20px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #2f373d;
+            p {
+              margin-bottom: 0;
+            }
+            i{
+              color: #000;
+              font-size: 24px;
+            }
+           
+          }
+          tr:last-child {
+            border-bottom: 2px solid #f1f1f1;
+          }
+        }
+      }
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      border: 1px solid #eaebef;
+      box-sizing: border-box;
+      border-radius: 12px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+  
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 1px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+    input:checked + .slider {
+      background-color: #ffffff;
+    }
+  
+    input:focus + .slider {
+      border: 1px solid #eaebef;
+    }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(18px);
+      -ms-transform: translateX(18px);
+      transform: translateX(20px);
+      background: #6dd400;
+    }
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    .slider.round:before {
+      border-radius: 50%;
+      background-color: #eaebef;
+    }
+    .pagination-bottom {
+      padding: 20px;
+    }
+  
+    ul.form-searchHome {
+      position: absolute;
+      background: #fff;
+      margin-top: 1px;
+      left: 0;
+      right: 0;
+      box-shadow: 0px 2px 4px rgba(2, 18, 27, 0.57);
+      margin-left: 15px;
+      margin-right: 15px;
+      li {
+        padding: 15px 10px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 19px;
+        color: #2c3e50;
+      }
+      li:hover {
+        background: linear-gradient(161.96deg, #fad961 -13.65%, #f76b1c 118.48%);
+        color: #fff;
+      }
+      li:nth-child(odd) {
+        background: #f2f2f2;
+      }
+      li:nth-child(odd):hover {
+        background: linear-gradient(161.96deg, #fad961 -13.65%, #f76b1c 118.48%);
+        color: #fff;
+      }
+    }
+    .select {
+      position: relative;
+    }
+    
+    .selectLabel {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+    
+    .selectWrapper {
+      position: relative;
+    }
+    
+    .selectCustom {
+      position: relative;
+    }
+    
+    .selectCustom-trigger {
+      font-size: 16px;
+      font-family: "Lato", sans-serif;
+      cursor: pointer;
+      padding: 10px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .selectCustom-trigger::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      line-height: 3.8rem;
+      right: 0.8rem;
+      // background: #fff url("../../../assets/images/arrow-down.png") no-repeat right 10px center;
+    }
+    
+    .selectCustom-options {
+      position: absolute;
+      top: calc(3.8rem - 12px);
+      left: 0;
+      width: 100%;
+      box-shadow: 0px 2px 4px rgba(2, 18, 27, 0.57);
+      background-color: #fff;
+      z-index: 1;
+      display: none;
+      color: #2C3E50; 
+      font-size: 16px;
+    }
+    
+    .selectCustom.isActive .selectCustom-options {
+      display: block;
+    }
+    
+    .selectCustom-option {
+      position: relative;
+      padding: 10px;
+      height: 40px;
+    }
+    
+    .selectCustom-option:hover {
+      background: linear-gradient(161.96deg, #FAD961 -13.65%, #F76B1C 118.48%);
+      color: #fff;
+    }
+    .selectCustom-option:nth-child(odd){
+      background: #F2F2F2 ;
+    }
+  
+    .selectCustom-option:nth-child(odd):hover{
+      background: linear-gradient(161.96deg, #FAD961 -13.65%, #F76B1C 118.48%);
+      color: #fff;
+    }
+    .overflow-visible{
+      overflow: visible;
+    }
+  
+  }
+  

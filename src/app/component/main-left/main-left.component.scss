@@ -1,0 +1,93 @@
+.left-headerMenu {
+    .headerMenu {
+      padding: 30px 20px;
+      height: 100vh;
+      .logo {
+        margin-top: 10px;
+      }
+      .l-headerMenu {
+        margin-top: 60px;
+        ul.list-menu {
+          li {
+            margin-bottom: 30px;
+            cursor: pointer;
+            p {
+              vertical-align: middle;
+              margin-bottom: 0;
+              float: left;
+              margin-left: 5px;
+            }
+            h3 {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 20px;
+              color: #ffffff;
+              vertical-align: middle;
+              margin: 0;
+              margin-left: 45px;
+            }
+           
+            ul {
+              li {
+                cursor: pointer;
+                padding-left: 45px;
+                margin-bottom: 0;
+                span {
+                  width: 6px;
+                  height: 6px;
+                  display: inline-block;
+                  background: #fff;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                  vertical-align: middle;
+                }
+                p {
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: #fff;
+                  margin: 0;
+                  display: inline-block;
+                  vertical-align: middle;
+                  font-weight: 500;
+                  float: none;
+                }
+              }
+              li.active {
+                span {
+                  background: #f77824;
+                }
+                p {
+                  color: #f77824;
+                }
+              }
+            }
+          }
+          li.active {
+            h3 {
+              color: #f77824;
+            }
+          }
+        }
+      }
+    }
+  
+    .bottom-header-menu {
+      // position: absolute;
+      // bottom: 5%;
+      img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 15px;
+      }
+      p {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        vertical-align: sub;
+      }
+    }
+  }
+  

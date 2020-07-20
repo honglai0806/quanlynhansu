@@ -1,1 +1,200 @@
-<p>department works!</p>
+<div class="m-admMembers">
+    <div class="m-topTitleMembers clearfix">
+        <h3>Department</h3>
+        <div class="right-btn">
+            <button class="btn btn-trans-primary" (click)="openModalCreate(template)">Add
+                new</button>
+        </div>
+    </div>
+    <div class="m-contentMembers">
+        <div class="m-filterMembers">
+            <div class="row m0">
+                <div class="col-md-3 col-12 col-lg-3 pL0">
+                    <div class="form-group mBT0">
+                        <div class="styles-select overflow-visible no-padding">
+                            <div class="selectWrapper selectWrapper-one">
+                                <div class="selectCustom js-selectCustom js-selectCustomMember">
+                                    <div class="selectCustom-trigger">Old</div>
+                                    <div class="selectCustom-options">
+                                        <div *ngFor="let option of dataType.availableOptions"
+                                            class="selectCustom-option">
+                                            {{option.nameType}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 col-lg-3 pL0">
+                    <div class="form-group mBT0">
+                        <div class="styles-select overflow-visible no-padding">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectCustom js-selectCustomMemberType">
+                                    <div class="selectCustom-trigger">All</div>
+                                    <div class="selectCustom-options">
+                                        <div *ngFor="let option of dataAll.availableOptions"
+                                            class="selectCustom-option">
+                                            {{option.name}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-tableMeber">
+            <div class="table-responsize">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Department Name</th>
+                            <th>Manager ID</th>
+                            <!-- <th class="text-center ">Active</th> -->
+                            <th colspan="2" class="text-center border-left">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listMember">
+                            <td>{{item.number}}</td>
+                            <td>{{item.name}}</td>
+                            <td> Resume</td>
+                            <!-- <td class="text-center ">
+                                <p *ngIf="item.active === true"><label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </p>
+                                <p *ngIf="item.active === false"><label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </p>
+                            </td> -->
+                            <td class="text-center border-left">
+                                <img class="cursor" (click)="openModalEdit(templateEdit)"
+                                    src='../../../assets/images/edit.png'>
+                            </td>
+                            <td class="text-center">
+                                <div class="cursor">
+                                    <i class="icon-delete"
+                                        class="fa fa-trash" aria-hidden="true" (click)="openDelete()"></i>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="pagination-bottom text-center">
+                <app-pagination [totalRecords]="10" [recordsPerPage]="2" (onPageChange)="displayActivePage($event)">
+                </app-pagination>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- popup-create -->
+ <ng-template #template>
+    <div class="modal-content">
+        <div class="m-header">
+            <p>Create Department</p>
+            <button type="button" class="close mBT8 pull-right" aria-label="Close" (click)="modalRef.hide()"><img
+                    src="../../../assets/images/Path.png" alt="">
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="m-content">
+                <div>
+                    <p class="title">Name</p>
+                    <input class="text" type="text" name="" id="" value="">
+                </div>
+                <div>
+                    <p class="title">Manager</p>
+                    <input class="text" type="text" name="" id="" value="">
+                </div>
+                <div>
+                    <p class="title">ID</p>
+                    <input class="text" type="text" name="" id="" value="">
+                </div>
+                <div>
+                    <p class="title">Location</p>
+                    <input class="text" type="password" name="" id="">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn_cancel" type="button" data-dismiss="modal " (click)="modalRef.hide()">
+                <span>Cancel</span>
+            </button>
+            <button class="btn_create">
+                <span> Create</span>
+            </button>
+        </div>
+    </div>
+</ng-template>
+<!-- end -->
+
+<!-- popup-editMember -->
+<ng-template #templateEdit>
+    <div class="modal-content">
+        <div class="m-header">
+            <p>Edit Department</p>
+            <button type="button" class="close mBT8 pull-right" aria-label="Close" (click)="modalRef.hide()"><img
+                    src="../../../assets/images/Path.png" alt="">
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="m-content">
+                <div>
+                    <p class="title">Name</p>
+                    <input class="text" type="text" name="" id="" value="">
+                </div>
+                <div>
+                    <p class="title">Manager</p>
+                    <input class="text" type="text" name="" id="" value="">
+                </div>
+                <div>
+                    <p class="title">ID</p>
+                    <input class="text" type="text" name="" id="" value="">
+                </div>
+                <div>
+                    <p class="title">Location</p>
+                    <input class="text" type="password" name="" id="">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn_cancel" type="button" data-dismiss="modal " (click)="modalRef.hide()">
+                <span>Cancel</span>
+            </button>
+            <button class="btn_save">
+                <span> Save</span>
+            </button>
+        </div>
+    </div>
+</ng-template>
+<!-- end -->
+
+<!-- popup-delete -->
+<ng-template #templateDelete>
+    <div>
+        <div class="modal-header" aria-label="Close">
+            <div class="close-right">
+                <p (click)="modalRef.hide()"><img src="../../../assets/images/close-cate.png"></p>
+            </div>
+            <p class="title-popup">Delete Confirmation</p>
+        </div>
+        <div class="modal-body">
+            <div class="icon-box">
+                <i class="material-icons"></i>
+            </div>
+            <p>Are you sure want to delete?</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-grey">Cancel</button>
+            <button class="btn btn-trans-primary">Delete</button>
+        </div>
+    </div>
+</ng-template>

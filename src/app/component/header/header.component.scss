@@ -1,0 +1,93 @@
+.adm-header{
+    .form-group{
+        input{
+            height: 46px;
+            padding: 0 30px 0 43px;
+        }
+    }
+    .adm-headerRight{
+        .adm-header-notifications{
+            margin-right: 30px;
+            margin-top: 15px;
+            span{
+                font-weight: bold;
+                font-size: 10px;
+                letter-spacing: -0.714286px;
+                color: #FFFFFF;
+                width: 19px;
+                height: 19px;
+                left: 24px;
+                top: 7px;
+                background: #F77824;
+                position: absolute;
+                border-radius: 50%;
+                text-align: center;
+                z-index: 1;
+            }
+            p{
+                position: relative;
+            }
+        }
+        .adm-header-profile{
+            width: 100%;
+            img{
+                float: left;
+            }
+            .right-adm-hProfile{
+                margin-left: 70px;
+                cursor: pointer;
+                .r-adm-hProfileTop{
+                    p{
+                        float: left;
+                        margin-bottom: 0;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #000000;
+                    }
+                    span{
+                        font-size: 10px;
+                        line-height: 20px;
+                        letter-spacing: 0.416667px;
+                        text-transform: uppercase;
+                        color: #000000;
+                    }
+                    img{
+                        float: none;
+                        vertical-align: bottom;
+                    }
+                }
+                
+            }
+        }
+        .r-adm-dropDown{
+            ul{
+                border: 1px solid #EAEBEF;
+                border-radius: 2px;
+                background: #fff;
+                li{
+                    border-bottom: 1px solid #EAEBEF;
+                    padding: 10px;
+                    p{
+                        margin-bottom: 0;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #000000;
+                    }
+                    span{
+                        font-size: 10px;
+                        line-height: 20px;
+                        letter-spacing: 0.416667px;
+                        text-transform: uppercase;
+                        color: #000000;
+                    }
+                }
+                li:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    
+}
